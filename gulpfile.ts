@@ -1,6 +1,7 @@
 import * as gulp from 'gulp';
 import {runSequence, task} from './tools/utils';
 
+
 // --------------
 // Clean (override).
 gulp.task('clean',       task('clean', 'all'));
@@ -11,6 +12,7 @@ gulp.task('clean.tmp',   task('clean', 'tmp'));
 gulp.task('check.versions', task('check.versions'));
 gulp.task('build.docs', task('build.docs'));
 gulp.task('serve.docs', task('serve.docs'));
+
 
 // --------------
 // Postinstall.
@@ -24,6 +26,7 @@ gulp.task('postinstall', done =>
 gulp.task('build.dev', done =>
   runSequence('clean.dist',
               'tslint',
+              'build.sass.dev',
               'build.assets.dev',
               'build.js.dev',
               'build.index.dev',
