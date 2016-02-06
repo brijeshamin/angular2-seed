@@ -17,6 +17,9 @@ addons:
     - gcc-4.8
     - g++-4.8
     - clang
+before_script:
+  - npm install -g gulp
+script: gulp
 services:
 before_install:
 - npm --version
