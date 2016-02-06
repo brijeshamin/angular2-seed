@@ -9,6 +9,8 @@ compiler:
   - clang
 install:
 - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+- npm install -g gulp
+- npm install -g ts-node
 addons:
   apt:
     sources:
@@ -17,9 +19,6 @@ addons:
     - gcc-4.8
     - g++-4.8
     - clang
-before_script:
-  - npm install -g gulp
-  - npm install -g ts-node
 script:
   - npm run build.dev
   - npm run build.prod
