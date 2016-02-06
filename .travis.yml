@@ -4,13 +4,7 @@ node_js:
 - '4.1'
 - '5.1'
 sudo: required
-env:
-  - CXX=g++-4.8
-compiler:
-  - gcc
-  - clang
 install:
-- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 - npm install -g gulp
 - npm install -g ts-node
 - npm install
@@ -37,6 +31,7 @@ branches:
   only:
   - master
 env:
+- CXX=g++-4.8
   global:
   # https://github.com/DefinitelyTyped/tsd#tsdrc
   # Token has no scope (read-only access to public information)
