@@ -11,6 +11,7 @@ install:
 - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 - npm install -g gulp
 - npm install -g ts-node
+- npm install
 addons:
   apt:
     sources:
