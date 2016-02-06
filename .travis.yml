@@ -4,6 +4,8 @@ node_js:
 - '4.1'
 - '5.1'
 sudo: required
+env:
+  - CXX=g++-4.8
 compiler:
   - gcc
   - clang
@@ -15,11 +17,9 @@ install:
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - ubuntu-toolchain-r-test
     packages:
-    - gcc-4.8
-    - g++-4.8
-    - clang
+      - g++-4.8
 script:
   - npm run build.dev
   - npm run build.prod
