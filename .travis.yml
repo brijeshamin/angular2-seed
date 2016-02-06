@@ -19,7 +19,10 @@ addons:
     - clang
 before_script:
   - npm install -g gulp
-script: gulp
+  - npm install -g ts-node
+script:
+  - npm run build.dev
+  - npm run build.prod
 services:
 before_install:
 - npm --version
