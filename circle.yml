@@ -16,3 +16,4 @@ test:
     - npm run build.dev
   post:
     - cp -R /home/ubuntu/angular2-seed/dist  $CIRCLE_ARTIFACTS/
+    - zip -r dist.zip /home/ubuntu/angular2-seed/dist
