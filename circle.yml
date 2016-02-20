@@ -15,4 +15,4 @@ test:
   override:
     - npm run build.dev
   post:
-    - cp /home/ubuntu/angular2-seed/dist  $CIRCLE_ARTIFACTS/
+    - cp -R /home/ubuntu/angular2-seed/dist  $CIRCLE_ARTIFACTS/
