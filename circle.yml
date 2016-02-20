@@ -14,3 +14,4 @@ dependencies:
 test:
   override:
     - gcc --version
+    - npm run build.dev
